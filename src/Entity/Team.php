@@ -9,14 +9,28 @@
 namespace App\Entity;
 
 
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class Team
 {
-
+    /**
+     * @var integer $id
+     */
     private $id;
+    /**
+     * @var string $name
+     */
     private $name;
+    /**
+     * @var string $strip
+     */
     private $strip;
+    /**
+     * @var integer $league
+     * @ORM\ManyToOne(targetEntity="App\Entity\League")
+     */
+    private $league;
 
     /**
      * @return integer
@@ -40,6 +54,26 @@ class Team
     public function getStrip()
     {
         return $this->strip;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLeague()
+    {
+        return $this->league;
+    }
+
+    /**
+     * @param integer $league
+     * @Assert\NotBlank(message="League cannot be empty")
+     * @return Team
+     */
+    public function setLeague($league)
+    {
+        $this->league = $league;
+
+        return $this;
     }
 
     /**

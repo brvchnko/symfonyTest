@@ -26,10 +26,9 @@ App\Entity\Team:
                 fixed: false
     manyToOne:
         league:
-            targetEntity: League
-            mappedBy: league
+            targetEntity: App\Entity\League
             inversedBy: team
-            joinColumns:
-                user_id:
+            joinColumn:
+                id:
                     referencedColumnName: id
-            orphanRemoval: true
+    lifecycleCallbacks: {  }

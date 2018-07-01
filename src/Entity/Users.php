@@ -11,9 +11,17 @@ namespace App\Entity;
 
 class Users
 {
-
+    /**
+     * @var integer $id
+     */
     private $id;
+    /**
+     * @var string $login
+     */
     private $login;
+    /**
+     * @var string $password
+     */
     private $password;
 
     /**

@@ -13,7 +13,13 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class League
 {
+    /**
+     * @var integer $id
+     */
     private $id;
+    /**
+     * @var string $name
+     */
     private $name;
 
     /**

@@ -18,10 +18,5 @@ App\Entity\League:
             length: 128
             options:
                 fixed: false
-    oneToMany:
-        team:
-            targetEntity: Team
-            fetch: LAZY
-            mappedBy: league
-            inversedBy: league
+
     lifecycleCallbacks: {  }

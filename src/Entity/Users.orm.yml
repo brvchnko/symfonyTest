@@ -20,8 +20,9 @@ App\Entity\Users:
                 fixed: false
         password:
             type: string
-                nullable: false
-                length: 36
-                options:
-                    fixed: false
+            nullable: false
+            length: 36
+            options:
+                fixed: false
+
     lifecycleCallbacks: {  }
