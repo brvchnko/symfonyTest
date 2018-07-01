@@ -1,0 +1,35 @@
+App\Entity\Team:
+    repositoryClass: App\Repository\TeamRepository
+    type: entity
+    table: team
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            length: 128
+            nullable: false
+            options:
+                fixed: false
+        strip:
+            type: string
+            length: 128
+            nullable: false
+            options:
+                fixed: false
+    manyToOne:
+        league:
+            targetEntity: League
+            mappedBy: league
+            inversedBy: team
+            joinColumns:
+                user_id:
+                    referencedColumnName: id
+            orphanRemoval: true
