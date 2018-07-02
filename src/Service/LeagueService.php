@@ -16,7 +16,7 @@ class LeagueService
 
     public function remove($id)
     {
-        $teams = $this->em->getRepository('App:Team')->findBy(['league' => $id]);
+        $teams = $this->em->getRepository('App:League')->findByLeague($id);
 
         if ($teams != null) {
             foreach ($teams as $team) {
@@ -26,7 +26,7 @@ class LeagueService
             $this->em->flush();
         }
 
-        $league = $this->em->getRepository('App:League')->findOneBy(['id' => $id]);
+        $league = $this->em->getRepository('App:League')->findOneById($id);
 
         if ($league != null) {
             $leagueName = $league->getName();

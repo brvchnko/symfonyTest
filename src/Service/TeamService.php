@@ -17,7 +17,7 @@ class TeamService
 
     public function create($name, $stripe, $league)
     {
-        $league = $this->em->getRepository('App:League')->findOneBy(['id' => $league]);
+        $league = $this->em->getRepository('App:League')->findOneById($league);
 
         if ($league != null) {
             $team = new Team();
@@ -36,7 +36,7 @@ class TeamService
 
     public function edit($name, $strip, $id)
     {
-        $team = $this->em->getRepository('App:Team')->findOneBy(['id' => $id]);
+        $team = $this->em->getRepository('App:Team')->findOneById($id);
 
         if ($team != null) {
             $teamName = $team->getName();
@@ -54,7 +54,7 @@ class TeamService
 
     public function getList($id)
     {
-        $listOfTeams = $this->em->getRepository('App:Team')->findBy(['league' => $id]);
+        $listOfTeams = $this->em->getRepository('App:Team')->findByLeague($id);
 
         $list = [];
 

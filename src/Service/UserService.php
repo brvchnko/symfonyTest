@@ -31,7 +31,7 @@ class UserService
     public function verify($username, $password)
     {
         $user = $this->em->getRepository('App:Users')
-            ->findOneBy(['login' => $username, 'password' => $password]);
+            ->findOneByCredentials($username, $password);
 
         if ($user != null) {
             return $user;

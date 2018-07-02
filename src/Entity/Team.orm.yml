@@ -1,6 +1,7 @@
 App\Entity\Team:
     type: entity
     table: team
+    repositoryClass: App\Repository\TeamRepository
     id:
         id:
             type: integer

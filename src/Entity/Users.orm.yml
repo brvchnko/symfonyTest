@@ -1,6 +1,7 @@
 App\Entity\Users:
     type: entity
     table: users
+    repositoryClass: App\Repository\UserRepository
     id:
         id:
             type: integer

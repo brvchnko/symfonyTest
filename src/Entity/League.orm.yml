@@ -1,6 +1,7 @@
 App\Entity\League:
     type: entity
     table: league
+    repositoryClass: App\Repository\LeagueRepository
     id:
         id:
             type: integer
