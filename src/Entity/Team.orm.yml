@@ -1,5 +1,4 @@
 App\Entity\Team:
-    repositoryClass: App\Repository\TeamRepository
     type: entity
     table: team
     id:

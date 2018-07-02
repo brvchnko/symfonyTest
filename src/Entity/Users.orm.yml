@@ -1,6 +1,5 @@
 App\Entity\Users:
     type: entity
-    repositoryClass: App\Repository\UsersRepository
     table: users
     id:
         id:
