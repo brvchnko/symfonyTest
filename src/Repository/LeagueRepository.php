@@ -16,15 +16,27 @@ class LeagueRepository
 
     public function findByLeague($leagueId)
     {
-        $teams = $this->em->getRepository('App:Team')->findBy(['league' => $leagueId]);
+        $qb = $this->em->createQueryBuilder();
+        $result = $qb->select('t')
+            ->from('App:Team', 't')
+            ->where('t.league = :id')
+            ->setParameter('id', $leagueId)
+            ->getQuery()
+            ->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
 
-        return $teams;
+        return $result;
     }
 
     public function findOneById($leagueId)
     {
-        $league = $this->em->getRepository('App:League')->findOneBy(['id' => $leagueId]);
+        $qb = $this->em->createQueryBuilder();
+        $result = $qb->select('l')
+            ->from('App:League', 'l')
+            ->where('l.id = :id')
+            ->setParameter('id', $leagueId)
+            ->getQuery()
+            ->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
 
-        return $league;
+        return $result;
     }
 }

@@ -16,8 +16,16 @@ class UserRepository
 
     public function findOneByCredentials($username, $password)
     {
-        $user = $this->em->getRepository('App:Users')->findBy(['login' => $username, 'password' => $password]);
+        $qb = $this->em->createQueryBuilder();
+        $result = $qb->select('u')
+            ->from('App:Users', 'u')
+            ->where('u.login = :login')
+            ->andWhere('u.password = :password')
+            ->setParameter('login', $username)
+            ->setParameter('password', $password)
+            ->getQuery()
+            ->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
 
-        return $user;
+        return $result;
     }
 }
