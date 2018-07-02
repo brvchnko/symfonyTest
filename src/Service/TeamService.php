@@ -90,14 +90,6 @@ class TeamService
 
         $listOfTeams = $this->em->getRepository('App:Team')->findByLeague($id);
 
-        $list = [];
-
-        foreach ($listOfTeams as $key => $team) {
-            $list[$key]['name'] = $team->getName();
-            $list[$key]['league'] = $team->getLeague()->getName();
-            $list[$key]['strip'] = $team->getStrip();
-        }
-
-        return $list;
+        return $listOfTeams;
     }
 }
