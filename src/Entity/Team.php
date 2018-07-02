@@ -14,6 +14,13 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class Team
 {
+
+    const ERROR_LEAGUE_ID = "Invalid league ID";
+    const ERROR_DATA_CREATE = "Invalid data for team creating";
+    const ERROR_DATA_EDIT = "Invalid data for team editing";
+    const ERROR_NOT_MATCHES = "ID %d does not match to anyone team";
+    const SUCCESSFULLY_CREATED = "Team %s was created!";
+    const SUCCESSFULLY_EDITED = "Team %s was edited!";
     /**
      * @var integer $id
      */

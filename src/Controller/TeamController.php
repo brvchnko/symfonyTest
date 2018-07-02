@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Team;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -49,13 +50,15 @@ class TeamController extends Controller
 
             return new JsonResponse([
                 'status' => true,
-                'message' => ($team != false) ? "Team $team was created!" : 'Invalid league ID'
+                'message' => ($team != false)
+                    ? sprintf(Team::SUCCESSFULLY_CREATED, $team)
+                    : Team::ERROR_LEAGUE_ID
             ], 200);
         }
 
         return new JsonResponse([
             'status' => false,
-            'message' => 'Invalid data for team creating'
+            'message' => Team::ERROR_DATA_CREATE
         ], 200);
     }
     /**
@@ -76,13 +79,15 @@ class TeamController extends Controller
 
             return new JsonResponse([
                 'status' => true,
-                'message' => ($team != false) ? "Team $team was edited" : "ID $id does not match to anyone team"
+                'message' => ($team != false)
+                    ? sprintf(Team::SUCCESSFULLY_EDITED, $team)
+                    : sprintf(Team::ERROR_NOT_MATCHES, $id)
             ], 200);
         }
 
         return new JsonResponse([
             'status' => false,
-            'message' => "Invalid data for team editing"
+            'message' => Team::ERROR_DATA_EDIT
         ], 403);
     }
 }

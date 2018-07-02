@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Users;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -28,12 +29,12 @@ class LoginController extends Controller
 
             return new JsonResponse([
                 'status' => true,
-                'message' => "User $username was successfully created!"
+                'message' => sprintf(Users::SUCCESSFULLY_CREATED, $username)
             ], 200);
         }
         return new JsonResponse([
             'status' => true,
-            'message' => "Invalid data for user registration!"
+            'message' => Users::ERROR_REGISTR
         ], 403);
     }
 
@@ -62,7 +63,7 @@ class LoginController extends Controller
         }
         return new JsonResponse([
             'status' => true,
-            'message' => "Invalid data for user registration!"
+            'message' => Users::ERROR_LOGIN
         ], 403);
     }
 }

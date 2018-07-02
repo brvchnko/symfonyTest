@@ -11,6 +11,9 @@ namespace App\Entity;
 
 class Users
 {
+    const SUCCESSFULLY_CREATED = "User %s was successfully created!";
+    const ERROR_REGISTR = "Invalid data for user registration!";
+    const ERROR_LOGIN = "Incorrect username or password.";
     /**
      * @var integer $id
      */

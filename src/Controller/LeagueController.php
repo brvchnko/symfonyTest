@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\League;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -22,13 +23,13 @@ class LeagueController extends Controller
 
             return new JsonResponse([
                 'status' => 'true',
-                'message' => "New League $league was created!"
+                'message' => sprintf(League::SUCCESSFULLY_CREATE, $league)
             ], 200);
         }
 
         return new JsonResponse([
             'status' => 'false',
-            'message' => 'Name cannot be null'
+            'message' => League::ERROR_BLANK_NAME
         ], 403);
     }
 
@@ -45,13 +46,15 @@ class LeagueController extends Controller
 
             return new JsonResponse([
                 'status' => 'true',
-                'message' => ($league == true) ? "League $league was removed!" : "League with ID $id was not found"
+                'message' => ($league == true)
+                    ? sprintf(League::SUCCESSFULLY_REMOVED, $league)
+                    : sprintf(League::ERROR_REMOVE, $id)
             ], 200);
         }
 
         return new JsonResponse([
             'status' => 'false',
-            'message' => 'ID cannot be null'
+            'message' => League::ERROR_BLANK_ID
         ], 403);
     }
 }
