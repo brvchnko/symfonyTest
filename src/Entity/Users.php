@@ -1,19 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: brvchnko
- * Date: 7/1/18
- * Time: 8:32 PM
- */
 
 namespace App\Entity;
 
 
 class Users
 {
-    const SUCCESSFULLY_CREATED = "User %s was successfully created!";
-    const ERROR_REGISTR = "Invalid data for user registration!";
-    const ERROR_LOGIN = "Incorrect username or password.";
     /**
      * @var integer $id
      */

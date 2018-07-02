@@ -8,6 +8,11 @@ use Doctrine\ORM\EntityManager;
 
 class UserService
 {
+    const ERROR_REGISTR = "Invalid data for user registration!";
+    const ERROR_LOGIN = "Incorrect username or password.";
+
+    const SUCCESSFULLY_CREATED = "User %s was successfully created!";
+
     private $em;
 
     public function __construct(EntityManager $em)
@@ -17,15 +22,18 @@ class UserService
 
     public function create($username, $password)
     {
-        $user = new Users();
+        if ($username && $password) {
+            $user = new Users();
 
-        $user->setLogin($username);
-        $user->setPassword($password);
+            $user->setLogin($username);
+            $user->setPassword($password);
 
-        $this->em->persist($user);
-        $this->em->flush();
+            $this->em->persist($user);
+            $this->em->flush();
 
-        return true;
+            return sprintf(self::SUCCESSFULLY_CREATED, $username);
+        }
+        return self::ERROR_REGISTR;
     }
 
     public function verify($username, $password)
