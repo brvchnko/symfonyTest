@@ -8,8 +8,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Lexik\Bundle\JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationSuccessHandler;
-use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTManager;
 
 class LoginController extends Controller
 {
@@ -43,7 +41,7 @@ class LoginController extends Controller
      * @return JsonResponse
      * @Route("/api/login", name="login", methods={"POST"})
      */
-    public function loginAction(Request $request, AuthenticationSuccessHandler $successHandler, JWTManager $jwt)
+    public function loginAction(Request $request)
     {
         if ($request->request->has('username') && $request->request->has('password')) {
             $userService = $this->get('app.user');
@@ -53,10 +51,10 @@ class LoginController extends Controller
             $user = $userService->verify($username, $password);
 
             if ($user !== false) {
-
+                //TODO TOKEN
                 return new JsonResponse([
                     'status' => true,
-                    'token' => $successHandler->handleAuthenticationSuccess($user,null)
+                    'token' => 'token'
                 ], 200);
             }
 
