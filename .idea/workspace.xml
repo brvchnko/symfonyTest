@@ -2,28 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb9693f-15d0-4788-bc91-b1d989f9b11a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/LeagueController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/TeamController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/League.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Team.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Repository/LeagueRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Repository/TeamRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Service/TeamService.php" />
-      <change beforePath="$PROJECT_DIR$/.env.dist" afterPath="$PROJECT_DIR$/.env.dist" />
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/football.iml" afterPath="$PROJECT_DIR$/.idea/football.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" afterPath="$PROJECT_DIR$/config/bundles.php" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" afterPath="$PROJECT_DIR$/config/routes.yaml" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" afterPath="$PROJECT_DIR$/config/services.yaml" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e5ccee6-ef50-48ac-afb7-a70e77fb6eaf.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/football.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T010109.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T010320.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T010428.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T010528.200.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T010610.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T010807.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T011022.400.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T011147.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T011301.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T013511.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T013627.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T122455.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T122541.400.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T122611.400.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T122631.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T122729.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T122808.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T122826.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T122830.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T123156.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T123217.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T123224.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T123233.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T123445.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T123521.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T124614.500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T124659.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T125213.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T125230.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T125246.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T125303.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-03T125413.401.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,15 +75,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="REAMDE.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/REAMDE.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,6 +112,7 @@
         <option value="$PROJECT_DIR$/src/Service/LeagueService.php" />
         <option value="$PROJECT_DIR$/src/Controller/LeagueController.php" />
         <option value="$PROJECT_DIR$/src/Controller/TeamController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -241,6 +258,28 @@
               <item name="football" type="b2602c69:ProjectViewProjectNode" />
               <item name="football" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="football" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="football" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="football" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="football" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -285,17 +324,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2251000" />
+    <option name="totallyTimeSpent" value="2974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33085108" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33085108" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16484717" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -386,22 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -713,6 +737,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/REAMDE.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -721,6 +753,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
