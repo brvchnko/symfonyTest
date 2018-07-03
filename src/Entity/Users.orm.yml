@@ -12,7 +12,7 @@ App\Entity\Users:
             generator:
                 strategy: IDENTITY
     fields:
-        login:
+        username:
             type: string
             nullable: false
             length: 24

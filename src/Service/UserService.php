@@ -5,6 +5,7 @@ namespace App\Service;
 
 use App\Entity\Users;
 use Doctrine\ORM\EntityManager;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserService
 {
@@ -14,10 +15,13 @@ class UserService
     const SUCCESSFULLY_CREATED = "User %s was successfully created!";
 
     private $em;
+    private $encoder;
 
-    public function __construct(EntityManager $em)
+    public function __construct(EntityManager $em, UserPasswordEncoderInterface $encoder)
     {
         $this->em = $em;
+        $this->encoder = $encoder;
+
     }
 
     public function create($username, $password)
@@ -25,8 +29,8 @@ class UserService
         if ($username && $password) {
             $user = new Users();
 
-            $user->setLogin($username);
-            $user->setPassword($password);
+            $user->setUsername($username);
+            $user->setPassword($this->encoder->encodePassword($username, $password));
 
             $this->em->persist($user);
             $this->em->flush();
@@ -34,16 +38,5 @@ class UserService
             return sprintf(self::SUCCESSFULLY_CREATED, $username);
         }
         return self::ERROR_REGISTR;
-    }
-
-    public function verify($username, $password)
-    {
-        $user = $this->em->getRepository('App:Users')
-            ->findOneByCredentials($username, $password);
-
-        if ($user != null) {
-            return $user;
-        }
-        return false;
     }
 }

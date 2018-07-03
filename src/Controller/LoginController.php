@@ -8,15 +8,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class LoginController extends Controller
 {
     /**
      * @param Request $request
-     * @return JsonResponse
+     * @return Response
      * @Route("/register", name="register", methods={"POST"})
      */
-    public function registerAction(Request $request)
+    public function register(Request $request)
     {
         $userService = $this->get('app.user');
         $username = $request->request->get('username');
@@ -24,36 +25,11 @@ class LoginController extends Controller
 
         $user = $userService->create($username, $password);
 
-        return new JsonResponse([
-            'status' => true,
-            'message' => $user
-        ], 200);
+        return new Response($user);
     }
 
-    /**
-     * @param Request $request
-     * @return JsonResponse
-     * @Route("/login", name="login", methods={"POST"})
-     */
-    public function loginAction(Request $request)
+    public function api()
     {
-        $userService = $this->get('app.user');
-        $username = $request->request->get('username');
-        $password = $request->request->get('password');
-
-        $user = $userService->verify($username, $password);
-
-        if ($user !== false) {
-            //TODO TOKEN
-            return new JsonResponse([
-                'status' => true,
-                'token' => 'token'
-            ], 200);
-        }
-
-        return new JsonResponse([
-            'status' => true,
-            'message' => UserService::ERROR_LOGIN
-        ], 403);
+        return new Response(sprintf('Logged in as %s', $this->getUser()->getUsername()));
     }
 }

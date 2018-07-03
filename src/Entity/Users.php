@@ -10,9 +10,9 @@ class Users
      */
     private $id;
     /**
-     * @var string $login
+     * @var string $username
      */
-    private $login;
+    private $username;
     /**
      * @var string $password
      */
@@ -29,9 +29,9 @@ class Users
     /**
      * @return string
      */
-    public function getLogin()
+    public function getUsername()
     {
-        return $this->login;
+        return $this->username;
     }
 
     /**
@@ -46,9 +46,9 @@ class Users
      * @param mixed $login
      * @return Users
      */
-    public function setLogin($login)
+    public function setUsername($username)
     {
-        $this->login = $login;
+        $this->username = $username;
 
         return $this;
     }
